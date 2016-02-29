@@ -87,7 +87,7 @@ turns m in to an identity matrix
 */
 void ident(struct matrix *m) {
   int r,c = 0;
-  while(m.row != r)
+  while(m.rows != r)
   
 }
 
@@ -100,7 +100,7 @@ Returns:
 multiply each element of m by x
 */
 void scalar_mult(double x, struct matrix *m) {
-  m.row
+  m.rows
 }
 
 
@@ -140,7 +140,7 @@ Returns: The translation matrix created using x, y and z
 as the translation offsets.
 ====================*/
 struct matrix * make_translate(double x, double y, double z) {
-  new_matrix()
+  
 }
 
 /*======== struct matrix * make_scale() ==========
