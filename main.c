@@ -20,5 +20,6 @@ int main() {
   free_matrix( transform );
   free_matrix( edges );
 
-
+  display(s);
+  save_extensions(s,"shapes.png");
 }  
