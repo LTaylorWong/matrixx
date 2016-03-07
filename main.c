@@ -16,14 +16,14 @@ int main() {
   int y;
 
   struct matrix *set1;
-  struct matrix *transform;
+  //struct matrix *transform;
 
   set1 = new_matrix(4, 4);
   c.red = 100;
   c.blue = 100 + x; 
   c.green = 100 - x;
   for(y = 0;y < 50; y++ ){
-    add_edge(set1, y,y++,y+=2,y+=3,y+=4,y+=5);
+    add_edge(set1, y,y++,y,y+=2,y,y+=3);
   }
   draw_lines(set1,s,c);
   
