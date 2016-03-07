@@ -33,5 +33,5 @@ int main() {
   free_matrix( set1 );
 
   //display(s);
-  save_extension(s,"shapes.png");
+  save_extension(s,"shapes.ppm");
 }  
