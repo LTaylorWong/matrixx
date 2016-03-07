@@ -10,15 +10,27 @@
 int main() {
 
   screen s;
-  struct matrix *edges;
+  color c;
+  clear_screen(s);
+  int x;
+  int y;
+
+  struct matrix *set1;
   struct matrix *transform;
 
-  edges = new_matrix(4, 4);
-  transform = new_matrix(4, 4);
-
+  set1 = new_matrix(4, 4);
+  c.red = 100;
+  c.blue = 100 + x; 
+  c.green = 100 - x;
+  for(y = 0;y < 50; y++ ){
+    add_edge(set1, y,y++,y+=2,y+=3,y+=4,y+=5);
+  }
+  draw_lines(set1,s,c);
   
-  free_matrix( transform );
-  free_matrix( edges );
+  //transform = new_matrix(4, 4);
+
+  //free_matrix( transform );
+  free_matrix( set1 );
 
   //display(s);
   save_extension(s,"shapes.png");
