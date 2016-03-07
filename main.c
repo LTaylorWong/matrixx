@@ -12,7 +12,6 @@ int main() {
   screen s;
   color c;
   clear_screen(s);
-  int x;
   int y;
 
   struct matrix *set1;
@@ -20,8 +19,8 @@ int main() {
 
   set1 = new_matrix(4, 4);
   c.red = 100;
-  c.blue = 100 + x; 
-  c.green = 100 - x;
+  c.blue = 10; 
+  c.green = 50;
   for(y = 0;y < 50; y++ ){
     add_edge(set1, y,y++,y,y+=2,y,y+=3);
   }
