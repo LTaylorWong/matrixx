@@ -77,6 +77,16 @@ Returns:
 print the matrix
 */
 void print_matrix(struct matrix *m) {
+  int r;
+  int c;
+  for (r = 0; r < m->rows; r++) {
+	printf("[ ");
+	for (c = 0; c < m->lastcol; c++) {
+	  printf("%f ",m->m[r][c]);
+	}
+	printf("]\n");
+  }
+
 }
 
 /*-------------- void ident() --------------
@@ -86,9 +96,17 @@ Returns:
 turns m in to an identity matrix
 */
 void ident(struct matrix *m) {
-  int r,c = 0;
-  while(m.rows != r)
-  
+  int r;
+  int c;
+  for (r = 0; r < m->rows; r++) {
+    for (c = 0; c < m->cols; c++) {
+      if (r == c)
+	m->m[r][c] = 1;
+      else
+	m->m[r][c] = 0;
+    }
+  }
+  m->lastcol = m->cols;
 }
 
 
